@@ -1079,7 +1079,7 @@ The groups are created under OU=pks,OU=Infra,DC=corp,DC=local
 
 -   Logout of harbor and try logging in as cody and scott
 
-\*for a full list of LDAP Filter go to
+For a full list of LDAP Filter go to
 <http://www.ldapexplorer.com/en/manual/109010000-ldap-filter-syntax.htm>
 
 RBAC Authorization to K8 Clusters
@@ -1292,6 +1292,4 @@ Copy the contents to a file getToken.sh
 
 **END SOLUTION 2**
 
-[^1]: Local Only when using EPMC as all metadata is stored in EPMC
-
-[^2]: Local Only when using EPMC as all metadata is stored in EPMC
+L
