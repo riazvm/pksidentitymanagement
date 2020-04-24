@@ -824,65 +824,33 @@ Click your app and then click Single sign-on.
 
 -   Under Select a single sign-on method, select SAML.
 
-![Single sign-on pane]
+![Single sign-on pane](media/media/image32.png)
 
 -   Under Set up Single Sign-On with SAML, click the pencil icon
     for Basic SAML Configuration.
 
-![Basic SAML Configuration button](media/media/image33.png)
+![Basic SAML Configuration
+button](media/media/image33.png)
 
 Configure as per table below
 
-+------------------------+--------------------------------------------+
-| **Description**        | **Values**                                 |
-+========================+============================================+
-| Identifier (Entity ID) | Enter PKS-API:8443.\                       |
-|                        | For example:                               |
-|                        |                                            |
-|                        | api.pks.example.com:8443                   |
-+------------------------+--------------------------------------------+
-| Reply URL              | Enter https://                             |
-|                        | PKS-API:8443/saml/SSO/alias/PKS-API:8443.\ |
-|                        | For example:                               |
-|                        |                                            |
-|                        | https://api.pks.example.com:84             |
-|                        | 43/saml/SSO/alias/api.pks.example.com:8443 |
-+------------------------+--------------------------------------------+
-| Sign on URL            | Enter https://                             |
-|                        | PKS-API:8443/saml/SSO/alias/PKS-API:8443.\ |
-|                        | For example:                               |
-|                        |                                            |
-|                        | https://api.pks.example.com:84             |
-|                        | 43/saml/SSO/alias/api.pks.example.com:8443 |
-+------------------------+--------------------------------------------+
-| Identifier (Entity ID) | Enter PKS-API:8443.\                       |
-|                        | For example:                               |
-|                        |                                            |
-|                        | api.pks.example.com:8443                   |
-+------------------------+--------------------------------------------+
-| Reply URL              | Enter https://                             |
-|                        | PKS-API:8443/saml/SSO/alias/PKS-API:8443.\ |
-|                        | For example:                               |
-|                        |                                            |
-|                        | https://api.pks.example.com:84             |
-|                        | 43/saml/SSO/alias/api.pks.example.com:8443 |
-+------------------------+--------------------------------------------+
-| Sign on URL            | Enter https://                             |
-|                        | PKS-API:8443/saml/SSO/alias/PKS-API:8443.\ |
-|                        | For example:                               |
-|                        |                                            |
-|                        | https://api.pks.example.com:84             |
-|                        | 43/saml/SSO/alias/api.pks.example.com:8443 |
-+------------------------+--------------------------------------------+
+----------------------------------
+| **Description**     | **Value**  | 
+| ---------------- | ---------- |
+| Identifier (Entity ID)  | Enter PKS-API:8443. <br> For example:   api.pks.example.com:8443  | 
+| Reply URL    | Enter https://PKS-API:8443/saml/SSO/alias/PKS-API:8443. <br> <br> For example: <br><br> https://api.pks.example.com:8443/saml/SSO/alias/api.pks.example.com:8443| 
+| Sign on URL  | Enter https://PKS-API:8443/saml/SSO/alias/PKS-API:8443. <br> For example:  <br><br> https://api.pks.example.com:8443/saml/SSO/alias/api.pks.example.com:8443 | 
+| Identifier (Entity ID)  | Enter PKS-API:8443 <br> For example:  <br><br> api.pks.example.com:8443 | 
+| Reply URL  | Enter https://PKS-API:8443/saml/SSO/alias/PKS-API:8443. <br> For example: <br><br>https://api.pks.example.com:8443/saml/SSO/alias/api.pks.example.com:8443  | 
+| Sign on URL         | Enter https://PKS-API:8443/saml/SSO/alias/PKS-API:8443. <br> For example:<br><br>https://api.pks.example.com:8443/saml/SSO/alias/api.pks.example.com:8443| 
+
 
 Note: VMware recommends that you use the default settings for the fields
 that are not referenced in the above table.
 
 -   Click the pencil icon for User Attributes &
 
-![Basic SAML Configuration
-button](media/media/image34.png){width="6.5in"
-height="1.5756944444444445in"}
+![Basic SAML Configuration button](media/media/image34.png)
 
 ### Claims  
 
@@ -893,9 +861,7 @@ applications](https://docs.microsoft.com/en-us/azure/active-directory/develop/ac
 the Microsoft Azure documentation. By default, Enterprise PKS uses
 the EmailAddress name identifier format.
 
-![A screenshot of a computer screen Description automatically
-generated](media/media/image35.png){width="6.820168416447944in"
-height="3.6418919510061243in"}
+![A screenshot of a computer screen Description automatically generated](media/media/image35.png)
 
 As shown above, do the following:
 
@@ -919,18 +885,14 @@ As shown above, do the following:
     PKS tile. For more information, see the [Configure SAML as an
     Identity
     Provider](https://docs.pivotal.io/pks/1-6/installing-pks-azure.html#configure-saml) section
-    of Installing Enterprise PKS on Azure. ![SAML Signing Certificate
-    pane](media/media/image36.png){width="6.5in"
-    height="2.1506944444444445in"}
+    of Installing Enterprise PKS on Azure. ![SAML Signing Certificate pane](media/media/image36.png)
 
 -   If using Enterprise PKS Management Console or Opsman's PKS Title,
     use the following options to configure SAML Identity provider. Make
     sure that "External Group Atribute" is set to "groups" as configured
     in Azure. Once you save this, you will need to update PKS.
 
-![A screenshot of a computer screen Description automatically
-generated](media/media/image37.png){width="6.633810148731409in"
-height="4.087837926509186in"}
+![A screenshot of a computer screen Description automatically generated](media/media/image37.png)
 
 -   Configure your group attributes and claims by doing the procedures
     in the [Configure group claims for SAML applications using SSO
@@ -941,17 +903,13 @@ height="4.087837926509186in"}
 In the example below, we're associating all PKS Admins to the AD group,
 "pksclusteradmins"
 
-![A screenshot of a computer screen Description automatically
-generated](media/media/image38.png){width="6.560810367454068in"
-height="3.350291994750656in"}
+![A screenshot of a computer screen Description automatically generated](media/media/image38.png)
 
 Below are details of pksclusteradmins attributes. This includes the
 Object ID, that you will need to map in UAA to the appropriate group
 (see below).
 
-![A screenshot of a computer screen Description automatically
-generated](media/media/image39.png){width="6.782669510061242in"
-height="3.675675853018373in"}
+![A screenshot of a computer screen Description automatically generated](media/media/image39.png)
 
 ### 
 
@@ -961,25 +919,23 @@ Now that SAML configuration is complete in PKS and Azure, we need to map
 the UAA scope to the right Azure AD Group. A UAA admin user can assign
 the following UAA scopes to Enterprise PKS users:
 
-**pks.clusters.manage:** Accounts with this scope can create and access
+> **pks.clusters.manage:** Accounts with this scope can create and access
 their own clusters.
 
-**pks.clusters.admin**: Accounts with this scope can create and access
+> **pks.clusters.admin**: Accounts with this scope can create and access
 all clusters.
 
-**pks.clusters.admin.read:** Accounts with this scope can access any
+> **pks.clusters.admin.read:** Accounts with this scope can access any
 information about all clusters except for cluster credentials.
 
 To grant Enterprise PKS access to a SAML group, perform the following
 steps:
 
-5.  Log in as the UAA admin using the procedure in [[Log in as a UAA
-    > Admin]{.underline}](https://docs.pivotal.io/pks/1-7/manage-users.html).
+5.  Log in as the UAA admin using the procedure in [[Log in as a UAA Admin]{.underline}](https://docs.pivotal.io/pks/1-7/manage-users.html).
 
-6.  Assign a PKS cluster scope to all users in a SAML group by running
-    > the following command:
+6.  Assign a PKS cluster scope to all users in a SAML group by running the following command:
 
--   uaac group map \--name UAA-SCOPE SAML-GROUP \--origin SAML-ORIGIN
+-   > uaac group map \--name UAA-SCOPE SAML-GROUP \--origin SAML-ORIGIN
 
 Where:
 
@@ -996,36 +952,28 @@ Where:
 
 For example:
 
-\$ uaac group map \--name pks.clusters.admin
-4809484d-dc00-419a-83f4-f1301ae0765b ---origin azure
+> $ uaac group map \--name pks.clusters.admin 4809484d-dc00-419a-83f4-f1301ae0765b ---origin azure
 
 ### Sign on using Enterprise PKS CLI 
 
 Now you can issue the following command to sign on using SAML Single
 Sign-on
 
-pks login -a {pksapi.example.com} ---sso
+> pks login -a {pksapi.example.com} ---sso
 
 ![A screenshot of a computer screen Description automatically
-generated](media/media/image40.png){width="6.722222222222222in"
-height="2.744557086614173in"}
+generated](media/media/image40.png)
 
 Use a web browser and copy the URL to get the code as following and
 click on "login with azure"
 
-![A screenshot of a computer screen Description automatically
-generated](media/media/image41.png){width="4.331081583552056in"
-height="2.706735564304462in"}
+![](media/media/image41.png)
 
 The first time you sign on you will get the following message:
 
-![A screenshot of a computer screen Description automatically
-generated](media/media/image42.png){width="5.482615923009623in"
-height="2.567567804024497in"}
+![](media/media/image42.png)
 
-![A screenshot of a computer screen Description automatically
-generated](media/media/image43.png){width="6.168918416447944in"
-height="2.946049868766404in"}
+![](media/media/image43.png)
 
 Use the code above to sign on...
 
@@ -1039,14 +987,10 @@ The following steps can help determine how to resolve this:
 Sign on using Chrome. Before hitting enter, right click and click on
 'inspect' on the page.
 
-![A screenshot of a computer Description automatically
-generated](media/media/image44.png){width="6.5in" height="3.19375in"}
-
+![](media/media/image44.png)
 Copy the SAML Respose and go to samltool.com/decode.php
 
-![A screenshot of a social media post Description automatically
-generated](media/media/image45.png){width="6.324324146981628in"
-height="3.458593613298338in"}
+![](media/media/image45.png)
 
 Here you can see the attributes that are being returned including the
 groups being returned and evaluated.
@@ -1073,16 +1017,13 @@ Harbor Authentication mode needs to be enabled when installing PKS.
 
 EPMC configuration, select Login harbor with LDAP users
 
-![](media/media/image47.png){width="7.5in"
-height="4.089583333333334in"}
+![](media/media/image47.png)
 
 If not using EPMC, change the Authentication mode to LDAP : Login harbor
 with LDAP users in the authentication section of the Harbor Registry
 tile within opsman.
 
-![A screenshot of a social media post Description automatically
-generated](media/media/image48.png){width="7.5in"
-height="3.904861111111111in"}
+![](media/media/image48.png)
 
 ### 
 
@@ -1092,15 +1033,12 @@ This section defines the usergroups we will be creating within the
 different identity management endpoints to associate the different
 personas to
 
-+--------------+-------------+-----------------------------+
-| **Group**    | **Persona** | **Role**                    |
-+==============+=============+=============================+
-| harboradmins | cody        | Harbor system administrator |
-|              |             |                             |
-|              | naomi       |                             |
-+--------------+-------------+-----------------------------+
-| harborusers  | scott       | Harbor developer            |
-+--------------+-------------+-----------------------------+
+ -------------------------------------------
+| **Group**     | **Persona**   | **Role**  | 
+| ---------------- | ---------------- | ------- | 
+| harboradmins     | cody <br> naomi  | Harbor system administrator      | 
+| harborusers      | scott   | Harbor developer       | 
+
 
 The groups are created under OU=pks,OU=Infra,DC=corp,DC=local
 
@@ -1114,27 +1052,30 @@ The groups are created under OU=pks,OU=Infra,DC=corp,DC=local
 
 -   Select Authentication and the Authentication Mode as LDAP
 
-> ![A screenshot of a cell phone Description automatically
-> generated](media/media/image49.png){width="7.5in"
-> height="4.0569444444444445in"}
+> ![](media/media/image49.png)
 
 -   Configure LDAP as per the below table
 
-  **Description**         **Values**                                                                                                                                                               **Description**
-  ----------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -------------------------------------------------------------------------------------------------------
-  LDAP URL                controlcenter.corp.local                                                                                                                                                 LDAP hostname
-  LDAP Search DN          CN=Administrator,CN=Users,DC=corp,DC=local                                                                                                                               Service account that has read rights to LDAP
-  LDAP Search Password    \<password\>                                                                                                                                                             Service account password
-  LDAP Base DN            CN=Users,DC=corp,DC=local                                                                                                                                                DN where Users exist
-  LDAP Filter\*           (&(objectCategory=Person)(sAMAccountName=\*)(\|(memberOf=CN=harboradmins,OU=pks,OU=Infra,DC=corp,DC=local)(memberOf=CN=harborusers,OU=pks,OU=Infra,DC=corp,DC=local)))   Add a filter that only queries users that belong to specific groups. Eg. harborusers and harboradmins
-  LDAP UID                sAMAccountName                                                                                                                                                           Attribute name used to search user
-  LDAP Scope              Subtree                                                                                                                                                                  
-  LDAP Group Base DN      OU=pks,OU=Infra,DC=corp,DC=local                                                                                                                                         Base DN under which the harbor usergroups exist
-  LDAP Group Filter                                                                                                                                                                                Filter to look up specific LDAP groups
-  LDAP Group GID          cn                                                                                                                                                                       Attribute used in a search to match users , can be sAMAccountName
-  LDAP Group Admin DN     cn=harboradmins,ou=pks,ou=infra,dc=corp,dc=local                                                                                                                         LDAP group that will have admin rights to Harbor
-  LDAP Group Membership   memberOf                                                                                                                                                                 All members of this group will have admin access to harbor
-  LDAP Group Scope        Subtree                                                                                                                                                                  
+ ---------------------------------------------------------
+| **Description**      | **Values**    |  **Description** | 
+| ---------------- | ---------------- | ------- | 
+| LDAP URL  | controlcenter.corp.local | LDAP hostname          | 
+
+
+| LDAP URL	| controlcenter.corp.local	| LDAP hostname |
+| LDAP Search DN | 	CN=Administrator,CN=Users,DC=corp,DC=local	| Service account that has read rights to LDAP
+| LDAP Search Password	| <password>	| Service account password
+| LDAP Base DN | 	CN=Users,DC=corp,DC=local	| DN where Users exist
+| LDAP Filter*| 	(&(objectCategory=Person)(sAMAccountName=*)(|(memberOf=CN=harboradmins,OU=pks,OU=Infra,DC=corp,DC=local)(memberOf=CN=harborusers,OU=pks,OU=Infra,DC=corp,DC=local)))	| Add a filter that only queries users that belong to specific groups. <br> Eg. harborusers and harboradmins| 
+| LDAP UID| 	sAMAccountName| 	Attribute name used to search user| 
+| LDAP Scope| 	Subtree	| | 	
+| LDAP Group Base DN | 	OU=pks,OU=Infra,DC=corp,DC=local | Base DN under which the harbor usergroups exist| 
+| LDAP Group Filter | | 	Filter to look up specific LDAP groups| 
+| LDAP Group GID| 	cn| 	Attribute used in a search to match users , can be sAMAccountName| 
+| LDAP Group Admin DN	| cn=harboradmins,ou=pks,ou=infra,dc=corp,dc=local	| LDAP group that will have admin rights to Harbor| 
+| LDAP Group Membership| 	memberOf| 	All members of this group will have admin access to harbor| 
+| LDAP Group Scope| 	Subtree	| | 
+                                                                                                                                   
 
 -   Save and Test LDAP server
 
@@ -1162,9 +1103,7 @@ don\'t interact with LDAP server at all)
 
 NOTE: Make sure that UAA as an OIDC provider is enabled
 
-![A picture containing clock, stop, black, city Description
-automatically generated](media/media/image50.tiff){width="7.5in"
-height="2.804054024496938in"}
+![](media/media/image50.tiff)
 
 Create Bindings
 ---------------
@@ -1239,8 +1178,7 @@ default.
 
 pks logout
 
-![](media/media/image51.png){width="6.600976596675416in"
-height="0.6736111111111112in"}
+![](media/media/image51.png)
 
 #### 
 
@@ -1263,9 +1201,7 @@ Eg. pks get-kubeconfig my-cluster -u naomi -a pks.corp.local -k
 
 #### 
 
-> ![A screenshot of text Description automatically
-> generated](media/media/image52.png){width="7.195570866141733in"
-> height="3.8826388888888888in"}
+> ![](media/media/image52.png)
 
 #### Create Roles
 
@@ -1300,17 +1236,13 @@ specific permissions to on namespace dataengg
 
 > Error from server (Forbidden): pods is forbidden:
 >
-> ![A close up of a device Description automatically
-> generated](media/media/image53.png){width="6.600975503062117in"
-> height="0.2777777777777778in"}
+> ![](media/media/image53.png)
 
 -   List pods running in the dataengg namespace
 
-kubectl get po \--namespace dataengg
+> kubectl get po \--namespace dataengg
 
-![](media/media/image54.png){width="7.175300743657043in"
-height="1.4006178915135608in"}
-
+![](media/media/image54.png)
 KubeConfig
 ----------
 
