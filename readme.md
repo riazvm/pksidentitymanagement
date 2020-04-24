@@ -258,9 +258,8 @@ Harbor manages images through projects. You provide access to these
 images to users by including the users in projects and assigning one of
 the following roles to them.
 
-![A screenshot of a cell phone Description automatically
-generated](media/media/image5.tiff){width="7.5in"
-height="3.8513517060367453in"}
+
+![](media/media/harbor.png)
 
 **Limited Guest**: A Limited Guest does not have full read privileges
 for a project. They can pull images but cannot push, and they cannot see
@@ -362,9 +361,7 @@ following aspects of Pivotal Container Service:
 Identity Management Endpoints
 =============================
 
-![A screenshot of a cell phone Description automatically
-generated](media/media/image6.tiff){width="7.5in"
-height="4.194444444444445in"}
+![](media/media/idmgmt.png)
 
 PKS supports the following identity management endpoints
 
@@ -389,27 +386,18 @@ This section defines the usergroups we will be creating within the
 different identity management endpoints to associate the different
 personas
 
-+------------------+-------------+-----------------------------------+
-| **Group**        | **Persona** | **Role**                          |
-+==================+=============+===================================+
-| pksclusteradmin  | alana       | pks.cluster.admin                 |
-+------------------+-------------+-----------------------------------+
-| pksclustermanage | cody        | pks.cluster.manage                |
-+------------------+-------------+-----------------------------------+
-| pksclusterread   | naomi\      | pks.cluster.read                  |
-|                  | scott       |                                   |
-+------------------+-------------+-----------------------------------+
-| k8clusteradmins  | naomi       | cluster-admin                     |
-+------------------+-------------+-----------------------------------+
-| k8developers     | scott       | create, list , get on pods in     |
-|                  |             | namespace dataengg                |
-+------------------+-------------+-----------------------------------+
-| harboradmins     | cody        | Harbor system administrator       |
-|                  |             |                                   |
-|                  | naomi       |                                   |
-+------------------+-------------+-----------------------------------+
-| harborusers      | scott       | Harbor developer                  |
-+------------------+-------------+-----------------------------------+
+
+ -------------------------------------------
+| **Group**     | **Persona**   | **Role**  | 
+| ---------------- | ---------------- | ------- | 
+| pksclusteradmin  | alana | pks.cluster.admin          | 
+| pksclustermanage | cody  | pks.cluster.manage         | 
+| pksclusterread   | naomi <br> scott | pks.cluster.read        | 
+| k8clusteradmins  | naomi   | cluster-admin        | 
+| k8developers     | scott| create, list , get on pods in  <br> namespace dataengg | 
+| harboradmins     | cody <br> naomi  | Harbor system administrator      | 
+| harborusers      | scott   | Harbor developer       | 
+
 
 LDAP -- As an Identity Endpoint
 ===============================
