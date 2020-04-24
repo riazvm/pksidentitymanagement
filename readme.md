@@ -196,13 +196,13 @@ clusters. This includes creating clusters, upgrading clusters, deleting
 clusters, creating network profiles, scaling cluster nodes etc. There
 are three roles or UAA profiles within PKS:
 
-**pks.clusters.manage:** Accounts with this scope can create and access
+> **pks.clusters.manage:** Accounts with this scope can create and access
 their own clusters
 
-**pks.clusters.admin**: Accounts with this scope can create and access
+> **pks.clusters.admin**: Accounts with this scope can create and access
 all clusters.
 
-**pks.clusters.admin.read**: Accounts with this scope can access any
+> **pks.clusters.admin.read**: Accounts with this scope can access any
 information about all clusters except for cluster credentials.
 
 It is straightforward that pks.clusters.admin should be assigned to an
@@ -412,11 +412,11 @@ LDAP provider.
 
 The document assumes to have all users under
 
-CN=Users,DC=corp,DC=local
+>CN=Users,DC=corp,DC=local
 
 The groups definitions are created under
 
-OU=pks,OU=Infra,DC=corp,DC=local
+>OU=pks,OU=Infra,DC=corp,DC=local
 
 NOTE: You could have different OU where your user's exists eg.
 IT(OU)/Offices(OU)/Boston
@@ -494,13 +494,11 @@ naomi, scott,
 
 **Step 2:** Under members click on Add
 
-![A screenshot of a computer Description automatically
-generated](media/media/image15.png)
+![](media/media/image15.png)
 
 **Step 3:** Enter 'alana' and click on check names
 
-![A screenshot of a social media post Description automatically
-generated](media/media/image16.png)
+![](media/media/image16.png)
 
 
 **Step 4:** Click on OK
@@ -525,13 +523,13 @@ This section covers the basic LDAP attributes required to configure PKS
 for LDAP integration. Use an LDAP Browser like LDAPSoft AD Browser if
 not familiar with how to get values for some of these attributes.
 
-LDAP Username : CN=Administrator,CN=Users,DC=corp,DC=local
+> LDAP Username : CN=Administrator,CN=Users,DC=corp,DC=local
 
 **User Search Base:**
 
 Select 'Users', right click and Copy DN
 
-CN=Users,DC=corp,DC=local
+> CN=Users,DC=corp,DC=local
 
 ![](media/media/image17.png)
 
@@ -628,7 +626,8 @@ Click on Add Group, select pks.cluster.read as role
 ![](media/media/image23.png)
 
 Group Name - DN of the group that need to be added with pks manage
-roles. - CN=pksclusterreadonly,OU=pks,OU=Infra,DC=corp,DC=local
+roles. 
+> CN=pksclusterreadonly,OU=pks,OU=Infra,DC=corp,DC=local
 
 ![](media/media/image24.png)
 
@@ -699,51 +698,39 @@ users
 To grant Enterprise PKS access to an external LDAP group, perform the
 following steps:
 
-1.  Log in as the UAA admin using the procedure in [[Log in as a UAA
-    > Admin]{.underline}](https://docs.pivotal.io/pks/1-7/manage-users.html).
+1.  Log in as the UAA admin using the procedure in [Log in as a UAA Admin](https://docs.pivotal.io/pks/1-7/manage-users.html).
 
-2.  To assign the pks.clusters.manage scope to all users in an LDAP
-    > group, run the following command:
+2.  To assign the pks.clusters.manage scope to all users in an LDAP group, run the following command:
 
 > uaac group map \--name pks.clusters.manage GROUP-DISTINGUISHED-NAME
->
-> Where GROUP-DISTINGUISHED-NAME is the LDAP Distinguished Name (DN) for
-> the group.
->
-> For example:
->
-> uaac group map \--name pks.clusters.manage
-> cn=pksclustermanage,ou=pks,ou=infra,dc=corp,dc=local
->
-> For more information about LDAP DNs, see the [[LDAP DNs and
-> RDNs]{.underline}](https://ldap.com/ldap-dns-and-rdns/) in the LDAP
-> documentation.
 
-3.  To assign the pks.clusters.admin scope to all users in an LDAP
-    > group, run the following command:
+Where GROUP-DISTINGUISHED-NAME is the LDAP Distinguished Name (DN) for the group.
+
+For example:
+
+> uaac group map --name pks.clusters.manage cn=pksclustermanage,ou=pks,ou=infra,dc=corp,dc=local
+
+For more information about LDAP DNs, see the [LDAP DNs and RDNs](https://ldap.com/ldap-dns-and-rdns/) in the LDAP documentation.
+
+3.  To assign the pks.clusters.admin scope to all users in an LDAP group, run the following command:
 
 > uaac group map \--name pks.clusters.admin GROUP-DISTINGUISHED-NAME
->
-> Where GROUP-DISTINGUISHED-NAME is the LDAP Distinguished Name (DN) for
-> the group.
->
-> For example:
->
-> uaac group map \--name pks.clusters.admin
-> cn=pksclusteradmin,ou=pks,ou=infra,dc=corp,dc=local
 
-4.  To assign the pks.clusters.read scope to all users in an LDAP group,
-    > run the following command:
+Where GROUP-DISTINGUISHED-NAME is the LDAP Distinguished Name (DN) for the group.
+
+For example:
+
+> uaac group map \--name pks.clusters.admin cn=pksclusteradmin,ou=pks,ou=infra,dc=corp,dc=local
+
+4.  To assign the pks.clusters.read scope to all users in an LDAP group, run the following command:
 
 > uaac group map \--name pks.clusters.read GROUP-DISTINGUISHED-NAME
->
-> Where GROUP-DISTINGUISHED-NAME is the LDAP Distinguished Name (DN) for
-> the group.
->
-> For example:
->
-> uaac group map \--name pks.clusters.read
-> cn=pksclusterreadonly,ou=pks,ou=infra,dc=corp,dc=local
+
+Where GROUP-DISTINGUISHED-NAME is the LDAP Distinguished Name (DN) for the group.
+
+For example:
+
+> uaac group map \--name pks.clusters.read cn=pksclusterreadonly,ou=pks,ou=infra,dc=corp,dc=local
 
 OpsMan LDAP Integration
 -----------------------
@@ -789,8 +776,7 @@ Azure Active Directory as a SAML Identity Endpoint
 Given below are the detailed steps of configuring single-sign-on (SSO)
 between Azure Active Directory and VMware Enterprise PKS
 
-These steps are found
-[here](https://docs.pivotal.io/pks/1-6/azure-ad-sso-config.html)
+These steps are found [here](https://docs.pivotal.io/pks/1-6/azure-ad-sso-config.html)
 
 ### Prerequisites
 
@@ -829,8 +815,7 @@ Click your app and then click Single sign-on.
 -   Under Set up Single Sign-On with SAML, click the pencil icon
     for Basic SAML Configuration.
 
-![Basic SAML Configuration
-button](media/media/image33.png)
+![Basic SAML Configuration button](media/media/image33.png)
 
 Configure as per table below
 
@@ -861,7 +846,7 @@ applications](https://docs.microsoft.com/en-us/azure/active-directory/develop/ac
 the Microsoft Azure documentation. By default, Enterprise PKS uses
 the EmailAddress name identifier format.
 
-![A screenshot of a computer screen Description automatically generated](media/media/image35.png)
+![](media/media/image35.png)
 
 As shown above, do the following:
 
@@ -892,7 +877,7 @@ As shown above, do the following:
     sure that "External Group Atribute" is set to "groups" as configured
     in Azure. Once you save this, you will need to update PKS.
 
-![A screenshot of a computer screen Description automatically generated](media/media/image37.png)
+![](media/media/image37.png)
 
 -   Configure your group attributes and claims by doing the procedures
     in the [Configure group claims for SAML applications using SSO
@@ -903,13 +888,13 @@ As shown above, do the following:
 In the example below, we're associating all PKS Admins to the AD group,
 "pksclusteradmins"
 
-![A screenshot of a computer screen Description automatically generated](media/media/image38.png)
+![](media/media/image38.png)
 
 Below are details of pksclusteradmins attributes. This includes the
 Object ID, that you will need to map in UAA to the appropriate group
 (see below).
 
-![A screenshot of a computer screen Description automatically generated](media/media/image39.png)
+![](media/media/image39.png)
 
 ### 
 
@@ -961,8 +946,7 @@ Sign-on
 
 > pks login -a {pksapi.example.com} ---sso
 
-![A screenshot of a computer screen Description automatically
-generated](media/media/image40.png)
+![](media/media/image40.png)
 
 Use a web browser and copy the URL to get the code as following and
 click on "login with azure"
@@ -1052,7 +1036,7 @@ The groups are created under OU=pks,OU=Infra,DC=corp,DC=local
 
 -   Select Authentication and the Authentication Mode as LDAP
 
-> ![](media/media/image49.png)
+![](media/media/image49.png)
 
 -   Configure LDAP as per the below table
 
@@ -1143,18 +1127,17 @@ a ClusterRoleBinding.
 The following is an example of a cluster role for with permissions to
 all resources
 
-> PKS by default has a cluster-admin cluster role configured, this could
-> be used instead.
->
-> Copy the contents below to a file cluster-all-role.yaml
->
+PKS by default has a cluster-admin cluster role configured, this could be used instead.
+
+Copy the contents below to a file cluster-all-role.yaml
+
 > kubectl apply -f cluster-all-role.yaml
 
 The following is an example of a cluster role for certain resources with
 get, list and watch permissions
 
-> Copy the contents below to a file cluster-reader-role.yaml
->
+Copy the contents below to a file cluster-reader-role.yaml
+
 > kubectl apply -f cluster-reader-role.yaml
 
 #### 
@@ -1167,14 +1150,13 @@ get, list and watch permissions
 The cluster role referred here is cluster-admin that exists in pks by
 default.
 
-> Copy the contents to a file admin-cluster-binding.yaml
->
-> NOTE: We are assigning the group 'k8clusteradmins' that is present in
-> our LDAP configuration.
+Copy the contents to a file admin-cluster-binding.yaml
+
+NOTE: We are assigning the group 'k8clusteradmins' that is present in our LDAP configuration.
 
 -   Logout of the pks using the pks cli
 
-pks logout
+> pks logout
 
 ![](media/media/image51.png)
 
@@ -1182,10 +1164,9 @@ pks logout
 
 -   Retrieve the kube config for user
 
-> To obtain kubeconfig for a selected cluster and a user, run the
-> following command:
+To obtain kubeconfig for a selected cluster and a user, run the following command:
 
-Eg. pks get-kubeconfig my-cluster -u naomi -a pks.corp.local -k
+> Eg. pks get-kubeconfig my-cluster -u naomi -a pks.corp.local -k
 
 #### 
 
@@ -1195,19 +1176,18 @@ Eg. pks get-kubeconfig my-cluster -u naomi -a pks.corp.local -k
 
 -   Set context
 
-> All pods running in the cluster should be visible
+All pods running in the cluster should be visible
 
 #### 
 
-> ![](media/media/image52.png)
+![](media/media/image52.png)
 
 #### Create Roles
 
-> Create a Role on the namespace dataengg which has reader permissions
-> for pods and pod-logs.(get and list permissions). Copy the contents to
-> a file role-dataengg.yaml
+Create a Role on the namespace dataengg which has reader permissions for pods and pod-logs.(get and list permissions). Copy the contents to
+a file role-dataengg.yaml
 
-kubectl apply -f role-dataengg.yaml
+> kubectl apply -f role-dataengg.yaml
 
 #### Role binding for the Developer Role
 
@@ -1216,10 +1196,9 @@ kubectl apply -f role-dataengg.yaml
 
 Copy the contents to a file dataengg-role-binding.yaml
 
-> NOTE: We are assigning the group 'pksdev' that is present in our LDAP
-> configuration
+NOTE: We are assigning the group 'pksdev' that is present in our LDAP configuration
 
-kubectl apply -f dataengg-role-binding.yaml
+> kubectl apply -f dataengg-role-binding.yaml
 
 #### Test OIDC based access for 'k8developers
 
@@ -1232,15 +1211,16 @@ kubectl apply -f dataengg-role-binding.yaml
 This will result in an error since 'scott' is not an admin and has
 specific permissions to on namespace dataengg
 
-> Error from server (Forbidden): pods is forbidden:
->
-> ![](media/media/image53.png)
+Error from server (Forbidden): pods is forbidden:
 
--   List pods running in the dataengg namespace
+![](media/media/image53.png)
+
+List pods running in the dataengg namespace
 
 > kubectl get po \--namespace dataengg
 
-![](media/media/image54.png)
+![](media/media/image54.png) 
+
 KubeConfig
 ----------
 
@@ -1251,13 +1231,11 @@ KubeConfig
 In the LDAP configuration we have 'visiondev' assigned to the 'pksdev'
 group with a password \<password\>
 
-> To obtain kubeconfig for a selected cluster and a user, run the
-> following command:
+To obtain kubeconfig for a selected cluster and a user, run the following command:
 
 NOTE: -k option used to avoid "missing certificate" warning
 
-E.G. pks get-kubeconfig my-cluster -u naoimi -p \<password\> -a
-pks.corp.local -k
+> E.G. pks get-kubeconfig my-cluster -u naoimi -p \<password\> -a pks.corp.local -k
 
 This will generate kubeconfig file which can be distributed to Developer
 to access the cluster.
@@ -1277,19 +1255,17 @@ with a password \<password\>
 Copy the contents to a file getToken.sh
 
 > Run getToken.sh
->
+
 > ./getToken.sh
 
 **Create kubeconfig File**
 
-> Create the kube config file or Update an existing one with the id
-> token and refresh token. (visiondev). If visiondev does not exist in
-> your existing config file, add a new entry.
->
-> Note : config file can be found under \~/.kube/config
->
-> If it does not exist create one
+Create the kube config file or Update an existing one with the id token and refresh token. (visiondev). If visiondev does not exist in
+your existing config file, add a new entry.
+
+Note : config file can be found under \~/.kube/config
+
+If it does not exist create one
 
 **END SOLUTION 2**
 
-L
