@@ -124,9 +124,9 @@ local accounts, LDAP and SAML integrations.
 | Enterprise PKS Management Console (EPMC)   | Local only (EPMC  1.7 will support LDAP and SAML) |         | root             |
 | OpsMan           | Local or LDAP or SAML     |         | admin(Found in EPMC metadata)|
 | Bosh             | Local or LDAP or SAMLSAML |         | admin(Found in EPMC metadata)            |
-| PKS              | 1\. Local  Account   2. Integrate to LDAP or SAML    | pks     | LDAP users  For local accounts admin (Found in EPMC metadata)     |
+| PKS              | 1. Local  Account <br>2. Integrate to LDAP or SAML    | pks     | For local accounts admin (Found in EPMC metadata)<br>LDAP users       |
 | K8 clusters      | Integrate to  LDAP or SAML    | K8 API  | LDAP users       |
-| Harbor           | 1\. Local  Account   2. Integrate to LDAP or SAML    | Harbor     | LDAP users  For local accounts admin (Found in EPMC metadata)   |
+| Harbor           | 1. Local  Account   2. Integrate to LDAP or SAML    | Harbor     | For local accounts admin (Found in EPMC metadata) <br>LDAP users   |
 
 
 EMPC - VMware Enterprise PKS Management Console provides a unified
