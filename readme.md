@@ -1,3 +1,5 @@
+Authored by Riaz Mohamed & Raghu Pemmaraju
+
 VMware Advanced Customer Engagements (ACE) Team
 
 April 2020
@@ -5,97 +7,90 @@ April 2020
 Table of Contents {#table-of-contents .TOC-Heading}
 =================
 
-[Introduction 3](#introduction)
+[Introduction](#introduction)
 
-[Personas and Roles 5](#personas-and-roles)
+[Personas and Roles](#personas-and-roles)
 
-[Role Definitions 5](#role-definitions)
+[Role Definitions](#role-definitions)
 
-[Enterprise PKS roles 5](#enterprise-pks-roles)
+[Enterprise PKS roles](#enterprise-pks-roles)
 
-[Kubernetes Roles: 6](#kubernetes-roles)
+[Kubernetes Roles:](#kubernetes-roles)
 
-[PKS RBAC 6](#pks-rbac)
+[PKS RBAC](#pks-rbac)
 
-[Harbor Roles: 7](#harbor-roles)
+[Harbor Roles](#harbor-roles)
 
-[Personas 8](#personas)
+[Personas](#personas)
 
-[Identity Management Endpoints 9](#identity-management-endpoints)
+[Identity Management Endpoints](#identity-management-endpoints)
 
-[Group Definitions 10](#group-definitions)
+[Group Definitions](#group-definitions)
 
-[LDAP -- As an Identity Endpoint 11](#ldap-as-an-identity-endpoint)
+[LDAP -- As an Identity Endpoint](#ldap-as-an-identity-endpoint)
 
 [Required LDAP Groups Configuration
 12](#required-ldap-groups-configuration)
 
-[Setup Users and Groups 12](#setup-users-and-groups)
+[Setup Users and Groups](#setup-users-and-groups)
 
-[Create Users 15](#create-users)
+[Create Users](#create-users)
 
-[Assign Users to Groups 17](#assign-users-to-groups)
+[Assign Users to Groups](#assign-users-to-groups)
 
-[EPMC LDAP settings 22](#_Toc37760687)
+[EPMC LDAP settings](#_Toc37760687)
 
-[Configure Users and Groups from EPMC
-24](#configure-users-and-groups-from-epmc)
+[Configure Users and Groups from EPMC](#configure-users-and-groups-from-epmc)
 
-[Map LDAP Group to PKS Admin roles
-24](#map-ldap-group-to-pks-admin-roles)
+[Map LDAP Group to PKS Admin roles](#map-ldap-group-to-pks-admin-roles)
 
-[Map LDAP Group to PKS Manage roles
-25](#map-ldap-group-to-pks-manage-roles)
+[Map LDAP Group to PKS Manage roles](#map-ldap-group-to-pks-manage-roles)
 
-[Map LDAP Group to PKS Read roles 26](#map-ldap-group-to-pks-read-roles)
+[Map LDAP Group to PKS Read roles](#map-ldap-group-to-pks-read-roles)
 
-[Login to a PKS (Revisit) 27](#login-to-a-pks-revisit)
+[Login to a PKS](#login-to-a-pks-revisit)
 
-[NON EPMC DEPLOYMENT 28](#non-epmc-deployment)
+[NON EPMC DEPLOYMENT](#non-epmc-deployment)
 
-[PKS LDAP Integration 28](#_Toc37760694)
+[PKS LDAP Integration](#_Toc37760694)
 
-[Configuring Groups in UAA 29](#_Toc37760695)
+[Configuring Groups in UAA](#_Toc37760695)
 
-[OpsMan LDAP Integration 30](#_Toc37760696)
+[OpsMan LDAP Integration](#_Toc37760696)
 
-[OpsMan RBAC group 30](#opsman-rbac-group)
+[OpsMan RBAC group](#opsman-rbac-group)
 
-[OpsMan Tile LDAP settings 31](#opsman-tile-ldap-settings)
+[OpsMan Tile LDAP settings](#opsman-tile-ldap-settings)
 
-[Azure Active Directory as a SAML Identity Endpoint
-33](#azure-active-directory-as-a-saml-identity-endpoint)
+[Azure Active Directory as a SAML Identity Endpoint](#azure-active-directory-as-a-saml-identity-endpoint)
 
-[Prerequisites 33](#prerequisites)
+[Prerequisites](#prerequisites)
 
-[Configure SAML in Azure AD 33](#configure-saml-in-azure-ad)
+[Configure SAML in Azure AD](#configure-saml-in-azure-ad)
 
-[Claims 37](#claims)
+[Claims](#claims)
 
-[UAA Scopes for Enterprise PKS Users
-40](#uaa-scopes-for-enterprise-pks-users)
+[UAA Scopes for Enterprise PKS Users](#uaa-scopes-for-enterprise-pks-users)
 
-[Sign on using Enterprise PKS CLI 41](#sign-on-using-enterprise-pks-cli)
+[Sign on using Enterprise PKS CLI](#sign-on-using-enterprise-pks-cli)
 
-[Troubleshooting: 43](#troubleshooting)
+[Troubleshooting:](#troubleshooting)
 
-[Harbor Identity Management 46](#harbor-identity-management)
+[Harbor Identity Management](#harbor-identity-management)
 
-[Harbor AD/LDAP as an identity Management end point
-46](#harbor-adldap-as-an-identity-management-end-point)
+[Harbor AD/LDAP as an identity Management end point](#harbor-adldap-as-an-identity-management-end-point)
 
-[Group definitions 47](#group-definitions-1)
+[Group definitions](#group-definitions-1)
 
-[Harbor LDAP configuration 48](#harbor-ldap-configuration)
+[Harbor LDAP configuration](#harbor-ldap-configuration)
 
-[RBAC Authorization to K8 Clusters
-50](#rbac-authorization-to-k8-clusters)
+[RBAC Authorization to K8 Clusters](#rbac-authorization-to-k8-clusters)
 
-[Create Bindings 50](#create-bindings)
+[Create Bindings](#create-bindings)
 
-[Roles And Role Bindings 51](#roles-and-role-bindings)
+[Roles And Role Bindings](#roles-and-role-bindings)
 
-[KubeConfig 56](#kubeconfig)
+[KubeConfig](#kubeconfig)
 
 Introduction
 ============
@@ -123,7 +118,7 @@ starting with a table that shows all of the PKS components that require
 user access. PKS supports three types of identity management: endpoints,
 local accounts, LDAP and SAML integrations.
 
-+------------------+------------------+---------+------------------+
+ ------------------------------------------------------------------+
 | **Component**    | **User Access**  | **API** | **User**         |
 +==================+==================+=========+==================+
 | Enterprise PKS   | Local only (EPMC |         | root             |
