@@ -250,14 +250,7 @@ to define a role cluster-wide, use a ClusterRole.
 The diagram below shows how different personals gain access to PKS and
 Kubernetes.
 
-![](media/media/image1.png){width="1.2229735345581803in"
-height="0.41891841644794403in"}![](media/media/image1.png){width="1.2229735345581803in"
-height="0.41891841644794403in"}
-
-![](media/media/image3.png){width="0.7094597550306212in"
-height="0.309925634295713in"}
-
-![](media/media/image3.png){width="1.2967344706911637in" height="0.5in"}
+![](media/media/imagetest.png)
 
 ### Harbor Roles:
 
