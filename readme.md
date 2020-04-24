@@ -402,9 +402,7 @@ personas
 LDAP -- As an Identity Endpoint
 ===============================
 
-![A screenshot of a cell phone Description automatically
-generated](media/media/image7.png){width="7.533972003499563in"
-height="5.351350612423447in"}
+![](media/media/image7.png)
 
 This section provides the steps to set up LDAP that we would be using in
 the later sections to configure PKS components.
@@ -443,24 +441,17 @@ within the PKS infrastructure.
 
 **Step 1**: Select New Organizational Unit:
 
-![A screenshot of a cell phone Description automatically
-generated](media/media/image8.png){width="7.0309284776902885in"
-height="4.006327646544182in"}
+![](media/media/image8.png)
 
-**\
-**
 
 **Step 2:** Enter Name e.g. Infra and click OK. The OU must be created:
 
-![A screenshot of a cell phone Description automatically
-generated](media/media/image9.png){width="6.804124015748031in"
-height="3.854410542432196in"}
+![](media/media/image9.png)
 
 **Step 3:** Drill down to Infra and create another OU pks:
 
 ![A screenshot of a social media post Description automatically
-generated](media/media/image10.png){width="5.577319553805775in"
-height="2.6073972003499564in"}
+generated](media/media/image10.png)
 
 **Step 4:** Create Groups under pks -- Select pks and click on New Group
 
@@ -468,16 +459,14 @@ height="2.6073972003499564in"}
 Step 5:** Create the pksclusteradmin group
 
 ![A screenshot of a social media post Description automatically
-generated](media/media/image11.png){width="7.5in"
-height="4.479861111111111in"}
+generated](media/media/image11.png)
 
 **Step 6:** Create the other groups under the pks OU --
 pksclustermanage, pksclusterread, k8clusteradmins, k8developers,
 harboradmins, harborusers
 
 ![A screenshot of a social media post Description automatically
-generated](media/media/image12.png){width="7.5in"
-height="4.483333333333333in"}
+generated](media/media/image12.png)
 
 ### Create Users 
 
@@ -491,9 +480,7 @@ NOTE: You could create your own org structure for users.
 Select the option of password never expires and enter a password (E.g.
 \<password\>)
 
-![A screenshot of a cell phone Description automatically
-generated](media/media/image13.png){width="7.5in"
-height="4.495138888888889in"}
+![](media/media/image13.png)
 
 **\
 Step 3:** Repeat the above steps to create the other personas cody,
@@ -503,21 +490,17 @@ naomi, scott,
 
 **Step 1:** Drill down to Infra/pks/pksclusteradmin group
 
-![A screenshot of a cell phone Description automatically
-generated](media/media/image14.png){width="7.5in"
-height="4.980555555555555in"}
+![](media/media/image14.png)
 
 **Step 2:** Under members click on Add
 
 ![A screenshot of a computer Description automatically
-generated](media/media/image15.png){width="6.630228565179353in"
-height="3.949283683289589in"}
+generated](media/media/image15.png)
 
 **Step 3:** Enter 'alana' and click on check names
 
 ![A screenshot of a social media post Description automatically
-generated](media/media/image16.png){width="6.105882545931759in"
-height="3.6680522747156608in"}
+generated](media/media/image16.png)
 
 **\
 **
@@ -526,24 +509,17 @@ height="3.6680522747156608in"}
 
 **Step 5:** Select the appropriate group and add users as per the table
 
-  ----------------------------
-  Group              Persona
-  ------------------ ---------
-  pksclusteradmin    alana
+ -------------------------------
+| **Group**     | **Persona**   | 
+| ---------------- | ---------- |
+| pksclusteradmin  | alana | 
+| pksclustermanage | cody  | 
+| pksclusterread   | naomi <br> scott | 
+| k8clusteradmins  | naomi   | 
+| k8developers     | scott| 
+| harboradmins     | cody  | 
+| harborusers      | scott   | 
 
-  pksclustermanage   cody
-
-  pksclusterread     naomi\
-                     scott
-
-  k8clusteradmins    naomi
-
-  k8developers       scott
-
-  harboradmins       cody
-
-  harborusers        scott
-  ----------------------------
 
 PKS LDAP Attributes
 
@@ -559,12 +535,8 @@ Select 'Users', right click and Copy DN
 
 CN=Users,DC=corp,DC=local
 
-![A screenshot of a social media post Description automatically
-generated](media/media/image17.png){width="7.5in"
-height="4.263888888888889in"}
+![](media/media/image17.png)
 
-**\
-**
 
 **Group Search Base**
 
@@ -572,8 +544,7 @@ The groups definitions are created under
 
 OU=pks,OU=Infra,DC=corp,DC=local
 
-![A screenshot of a cell phone Description automatically
-generated](media/media/image18.png){width="7.5in" height="3.96875in"}
+![](media/media/image18.png)
 
 EPMC LDAP settings
 ==================
@@ -586,23 +557,21 @@ NOTE: Since EPMC is the management console, we would require to only
 configure LDAP for PKS. In 'traditional' (tiles based) deployments LDAP
 would need to be configured for OpsMan as well.
 
-![A screenshot of a cell phone Description automatically
-generated](media/media/image19.png){width="7.5in"
-height="3.6798611111111112in"}
+![](media/media/image19.png)
 
 Example LDAP settings provided to EPMC. Please update with your values
 and use during installation.
-
-  **Description**                 **Value**
-  ------------------------------- --------------------------------------------
-  Server URL (Only takes an IP)   ldap://192.168.110.10
-  LDAP Username                   CN=Administrator,CN=Users,DC=corp,DC=local
-  LDAP Password                   \<password\>
-  User Search Base                CN=Users,DC=corp,DC=local
-  User Search Filter              sAMAccountName={0}
-  Group Search Base               OU=pks,OU=Infra,DC=corp,DC=local
-  Email                           mail
-
+ ----------------------------------
+| **Description**     | **Value**  | 
+| ---------------- | ---------- |
+| Server URL (Only takes an IP)  | ldap://192.168.110.10 | 
+| LDAP Username | CN=Administrator,CN=Users,DC=corp,DC=local  | 
+| LDAP Password   | \<password\> | 
+| User Search Base  | CN=Users,DC=corp,DC=local   | 
+| User Search Filter      | sAMAccountName={0}| 
+| Group Search Base     | OU=pks,OU=Infra,DC=corp,DC=local  | 
+| Email      | mail   | 
+ 
 -   Configure Created Clusters to use UAA as the OIDC provider --
     Enabled
 
@@ -612,9 +581,7 @@ and use during installation.
 For Harbor LDAP integration on the Harbor section of EPMC, select Log in
 Harbor with LDAP users.
 
-![A screenshot of a cell phone Description automatically
-generated](media/media/image20.png){width="7.5in"
-height="3.995833333333333in"}
+![](media/media/image20.png)
 
 NOTE: If this is not selected in the initial install, the Harbor tile
 will need to be deleted through Opsman and redeployed with the LDAP
@@ -636,17 +603,13 @@ Configure Users and Groups from EPMC
 Once the deployment is complete, click on Identity Management on the
 EPMC Console and select the groups tab
 
-![A screenshot of a cell phone Description automatically
-generated](media/media/image21.png){width="6.5in"
-height="1.8541666666666667in"}
+![](media/media/image21.png)
 
 ### Map LDAP Group to PKS Admin roles
 
 Click on Add Group
 
-![A screenshot of a cell phone Description automatically
-generated](media/media/image22.png){width="7.5in"
-height="4.013194444444444in"}
+![](media/media/image22.png)
 
 Group Name - DN of the group that need to be added with pks admin roles
 - CN=pksclusteradmin,OU=pks,OU=Infra,DC=corp,DC=local
@@ -655,9 +618,7 @@ Group Name - DN of the group that need to be added with pks admin roles
 
 Click on Add Group, select pks.cluster.manage as role
 
-![A screenshot of a cell phone Description automatically
-generated](media/media/image23.png){width="7.5in"
-height="4.064583333333333in"}
+![](media/media/image23.png)
 
 Group Name - DN of the group that need to be added with pks manage
 roles. - CN=pksclustermanage,OU=pks,OU=Infra,DC=corp,DC=local
@@ -666,18 +627,14 @@ roles. - CN=pksclustermanage,OU=pks,OU=Infra,DC=corp,DC=local
 
 Click on Add Group, select pks.cluster.read as role
 
-![A screenshot of a cell phone Description automatically
-generated](media/media/image23.png){width="7.5in"
-height="4.064583333333333in"}
+![](media/media/image23.png)
 
 Group Name - DN of the group that need to be added with pks manage
 roles. - CN=pksclusterreadonly,OU=pks,OU=Infra,DC=corp,DC=local
 
-![A screenshot of a cell phone Description automatically
-generated](media/media/image24.png){width="6.364705818022747in"
-height="2.27832895888014in"}
+![](media/media/image24.png)
 
-Login to a PKS (Revisit)
+Login to a PKS 
 ------------------------
 
 pks login -a pks.corp.local -u \<user-in-ldap\> \--skip-ssl-validation
@@ -710,23 +667,23 @@ The following section covers LDAP integration on the PKS tile:
 
 Note: Enable UAA as OIDC Provider
 
-![A screenshot of a cell phone Description automatically
-generated](media/media/image25.png){width="5.95294072615923in"
-height="3.1590015310586175in"}
+![](media/media/image25.png)
 
 Example LDAP settings provided to EPMC. Please update with your values
 and use during installation.
 
-  **Description**               **Values**
-  ----------------------------- --------------------------------------------
-  Current Decryption Password   \<password\>
-  Server URL                    ldap://controlcenter.corp.local
-  LDAP Username                 CN=Administrator,CN=Users,DC=corp,DC=local
-  LDAP Password                 \<password\>
-  User Search Base              CN=Users,DC=corp,DC=local
-  User Search Filter            sAMAccountName={0}
-  Group Search Base             OU=pks,OU=Infra,DC=corp,DC=local
-  Group Search Filter           Member{0}
+ ----------------------------------
+| **Description**     | **Value**  | 
+| ---------------- | ---------- |
+| Current Decryption Password  | \<password\> | 
+| Server URL (Only takes an IP)  | ldap://controlcenter.corp.local | 
+| LDAP Username | CN=Administrator,CN=Users,DC=corp,DC=local  | 
+| LDAP Password   | \<password\> | 
+| User Search Base  | CN=Users,DC=corp,DC=local   | 
+| User Search Filter      | sAMAccountName={0}| 
+| Group Search Base     | OU=pks,OU=Infra,DC=corp,DC=local  | 
+| Group Search Filter       |  Member{0}   | 
+
 
 Configuring Groups in UAA
 -------------------------
@@ -812,8 +769,7 @@ height="3.845833333333333in"}
 Access the OpsMan configuration pane via Admin setting that can be found
 on the right corner
 
-![A screenshot of a cell phone Description automatically
-generated](media/media/image27.png){width="6.5in"
+![](media/media/image27.png){width="6.5in"
 height="3.529166666666667in"}![A screenshot of a cell phone Description
 automatically generated](media/media/image28.png){width="6.5in"
 height="3.647222222222222in"}
@@ -1142,8 +1098,7 @@ Harbor Authentication mode needs to be enabled when installing PKS.
 
 EPMC configuration, select Login harbor with LDAP users
 
-![A screenshot of a cell phone Description automatically
-generated](media/media/image47.png){width="7.5in"
+![](media/media/image47.png){width="7.5in"
 height="4.089583333333334in"}
 
 If not using EPMC, change the Authentication mode to LDAP : Login harbor
@@ -1378,8 +1333,7 @@ specific permissions to on namespace dataengg
 
 kubectl get po \--namespace dataengg
 
-![A screenshot of a cell phone Description automatically
-generated](media/media/image54.png){width="7.175300743657043in"
+![](media/media/image54.png){width="7.175300743657043in"
 height="1.4006178915135608in"}
 
 KubeConfig
