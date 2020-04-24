@@ -121,45 +121,13 @@ local accounts, LDAP and SAML integrations.
  ------------------------------------------------------------------
 | **Component**    | **User Access**  | **API** | **User**         |
 | ---------------- | ---------------- | ------- | ---------------- |
-| Enterprise PKS   | Local only (EPMC |         | root             |
-| Management       | 1.7 will support |         |                  |
-| Console (EPMC)   | LDAP and SAML)   |         |                  |
- ------------------------------------------------------------------
+| Enterprise PKS Management Console (EPMC)   | Local only (EPMC  1.7 will support LDAP and SAML) |         | root             |
+| OpsMan           | Local or LDAP or SAML     |         | admin(Found in EPMC metadata)|
+| Bosh             | Local or LDAP or SAMLSAML |         | admin(Found in EPMC metadata)            |
+| PKS              | 1\. Local  Account   2. Integrate to LDAP or SAML    | pks     | LDAP users  For local accounts admin (Found in EPMC metadata)     |
+| K8 clusters      | Integrate to  LDAP or SAML    | K8 API  | LDAP users       |
+| Harbor           | 1\. Local  Account   2. Integrate to LDAP or SAML    | Harbor     | LDAP users  For local accounts admin (Found in EPMC metadata)   |
 
- ------------------------------------------------------------------
-| **Component**    | **User Access**  | **API** | **User**         |
-| ---------------- | ---------------- | ------- | ---------------- |
-| Enterprise PKS   | Local only (EPMC |         | root             |
-| Management       | 1.7 will support |         |                  |
-| Console (EPMC)   | LDAP and SAML)   |         |                  |
-| ---------------- | ---------------- | ------- | ---------------- |
-| OpsMan           | Local or         |         | admin            |
-|                  | LDAP or SAML     |         |                  |
-|                  |                  |         | (Found in EPMC   |
-|                  |                  |         | metadata)        |
-| ---------------- | ---------------- | ------- | ---------------- |
-| Bosh             | Local or LDAP or |         | admin            |
-|                  | SAML             |         |                  |
-|                  |                  |         | (Found in EPMC   |
-|                  |                  |         | metadata)        |
-| ---------------- | ---------------- | ------- | ---------------- |
-| PKS              | 1\. Local        | pks     | LDAP users       |
-|                  | Account          |         |                  |
-|                  |                  |         | For local        |
-|                  | 2\. Integrate to |         | accounts admin   |
-|                  | LDAP or SAML     |         | (Found in EPMC   |
-|                  |                  |         | metadata)        |
-| ---------------- | ---------------- | ------- | ---------------- |
-| K8 clusters      | Integrate to     | K8 API  | LDAP users       |
-|                  | LDAP or SAML     |         |                  |
-| ---------------- | ---------------- | ------- | ---------------- |
-| Harbor           | 1\. Local        | Harbor  | LDAP users       |
-|                  | Account          |         |                  |
-|                  |                  |         | For local        |
-|                  | 2\. Integrate to |         | accounts admin   |
-|                  | LDAP or SAML     |         | (Found in EPMC   |
-|                  |                  |         | metadata)        |
-| ---------------- | ---------------- | ------- | ---------------- |
 
 EMPC - VMware Enterprise PKS Management Console provides a unified
 installation experience for deploying Enterprise Pivotal Container
