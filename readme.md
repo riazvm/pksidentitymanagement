@@ -123,11 +123,13 @@ starting with a table that shows all of the PKS components that require
 user access. PKS supports three types of identity management: endpoints,
 local accounts, LDAP and SAML integrations.
 
+ ------------------------------------------------------------------
 | **Component**    | **User Access**  | **API** | **User**         |
  ------------------------------------------------------------------
 | Enterprise PKS   | Local only (EPMC |         | root             |
-
-
+| Management       | 1.7 will support |         |                  |
+| Console (EPMC)   | LDAP and SAML)   |         |                  |
+ ------------------------------------------------------------------
 +------------------+------------------+---------+------------------+
 | **Component**    | **User Access**  | **API** | **User**         |
 +==================+==================+=========+==================+
