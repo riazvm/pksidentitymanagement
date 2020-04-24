@@ -1060,12 +1060,10 @@ The groups are created under OU=pks,OU=Infra,DC=corp,DC=local
 | **Description**      | **Values**    |  **Description** | 
 | ---------------- | ---------------- | ------- | 
 | LDAP URL  | controlcenter.corp.local | LDAP hostname          | 
-
-
 | LDAP URL	| controlcenter.corp.local	| LDAP hostname |
-| LDAP Search DN | 	CN=Administrator,CN=Users,DC=corp,DC=local	| Service account that has read rights to LDAP
-| LDAP Search Password	| <password>	| Service account password
-| LDAP Base DN | 	CN=Users,DC=corp,DC=local	| DN where Users exist
+| LDAP Search DN | 	CN=Administrator,CN=Users,DC=corp,DC=local	| Service account that has read rights to LDAP |
+| LDAP Search Password	| <password>	| Service account password  |
+| LDAP Base DN | 	CN=Users,DC=corp,DC=local	| DN where Users exist  |
 | LDAP Filter*| 	(&(objectCategory=Person)(sAMAccountName=*)(|(memberOf=CN=harboradmins,OU=pks,OU=Infra,DC=corp,DC=local)(memberOf=CN=harborusers,OU=pks,OU=Infra,DC=corp,DC=local)))	| Add a filter that only queries users that belong to specific groups. <br> Eg. harborusers and harboradmins| 
 | LDAP UID| 	sAMAccountName| 	Attribute name used to search user| 
 | LDAP Scope| 	Subtree	| | 	
