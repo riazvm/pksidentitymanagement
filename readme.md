@@ -4,7 +4,7 @@ VMware Advanced Customer Engagements (ACE) Team
 
 April 2020
 
-Table of Contents {#table-of-contents .TOC-Heading}
+Table of Contents
 =================
 
 [Introduction](#introduction)
@@ -29,8 +29,7 @@ Table of Contents {#table-of-contents .TOC-Heading}
 
 [LDAP -- As an Identity Endpoint](#ldap-as-an-identity-endpoint)
 
-[Required LDAP Groups Configuration
-12](#required-ldap-groups-configuration)
+[Required LDAP Groups Configuration](#required-ldap-groups-configuration)
 
 [Setup Users and Groups](#setup-users-and-groups)
 
@@ -118,40 +117,40 @@ starting with a table that shows all of the PKS components that require
 user access. PKS supports three types of identity management: endpoints,
 local accounts, LDAP and SAML integrations.
 
- ------------------------------------------------------------------+
+--------------------------------------------------------------------
 | **Component**    | **User Access**  | **API** | **User**         |
-+==================+==================+=========+==================+
+--------------------------------------------------------------------
 | Enterprise PKS   | Local only (EPMC |         | root             |
 | Management       | 1.7 will support |         |                  |
 | Console (EPMC)   | LDAP and SAML)   |         |                  |
-+------------------+------------------+---------+------------------+
+--------------------------------------------------------------------
 | OpsMan           | Local[^2] or     |         | admin            |
 |                  | LDAP or SAML     |         |                  |
 |                  |                  |         | (Found in EPMC   |
 |                  |                  |         | metadata)        |
-+------------------+------------------+---------+------------------+
+--------------------------------------------------------------------
 | Bosh             | Local or LDAP or |         | admin            |
 |                  | SAML             |         |                  |
 |                  |                  |         | (Found in EPMC   |
 |                  |                  |         | metadata)        |
-+------------------+------------------+---------+------------------+
+--------------------------------------------------------------------
 | PKS              | 1\. Local        | pks     | LDAP users       |
 |                  | Account          |         |                  |
 |                  |                  |         | For local        |
 |                  | 2\. Integrate to |         | accounts admin   |
 |                  | LDAP or SAML     |         | (Found in EPMC   |
 |                  |                  |         | metadata)        |
-+------------------+------------------+---------+------------------+
+--------------------------------------------------------------------
 | K8 clusters      | Integrate to     | K8 API  | LDAP users       |
 |                  | LDAP or SAML     |         |                  |
-+------------------+------------------+---------+------------------+
+--------------------------------------------------------------------
 | Harbor           | 1\. Local        | Harbor  | LDAP users       |
 |                  | Account          |         |                  |
 |                  |                  |         | For local        |
 |                  | 2\. Integrate to |         | accounts admin   |
 |                  | LDAP or SAML     |         | (Found in EPMC   |
 |                  |                  |         | metadata)        |
-+------------------+------------------+---------+------------------+
+--------------------------------------------------------------------
 
 EMPC - VMware Enterprise PKS Management Console provides a unified
 installation experience for deploying Enterprise Pivotal Container
