@@ -502,8 +502,6 @@ generated](media/media/image15.png)
 ![A screenshot of a social media post Description automatically
 generated](media/media/image16.png)
 
-**\
-**
 
 **Step 4:** Click on OK
 
@@ -637,15 +635,15 @@ roles. - CN=pksclusterreadonly,OU=pks,OU=Infra,DC=corp,DC=local
 Login to a PKS 
 ------------------------
 
-pks login -a pks.corp.local -u \<user-in-ldap\> \--skip-ssl-validation
+> pks login -a pks.corp.local -u \<user-in-ldap\> \--skip-ssl-validation
 
 Login to pks as alana and create a cluster, this should be possible
 
-pks login -a pks.corp.local -u alana -k
+> pks login -a pks.corp.local -u alana -k
 
 Login to pks as cody and create a cluster, should be possible but cody
 
-pks login -a pks.corp.local -u cody -k
+> pks login -a pks.corp.local -u cody -k
 
 Login to pks as scott or naomi. The k8 developers will only be able to
 view clusters in the system but not do any admin tasks on the clusters.
@@ -758,9 +756,7 @@ what was done for the 'pksadmin' group.
 
 ### OpsMan RBAC group
 
-![A screenshot of a computer Description automatically
-generated](media/media/image26.png){width="6.5in"
-height="3.845833333333333in"}
+![](media/media/image26.png)
 
  
 
@@ -769,35 +765,23 @@ height="3.845833333333333in"}
 Access the OpsMan configuration pane via Admin setting that can be found
 on the right corner
 
-![](media/media/image27.png){width="6.5in"
-height="3.529166666666667in"}![A screenshot of a cell phone Description
-automatically generated](media/media/image28.png){width="6.5in"
-height="3.647222222222222in"}
+![](media/media/image27.png)
+[](media/media/image28.png)
 
-  ------------------------------------------------------------------------------
-  **Description**               **Values**
-  ----------------------------- ------------------------------------------------
-  Current Decryption Password   \<password\>
+----------------------------------
+| **Description**     | **Value**  | 
+| ---------------- | ---------- |
+| Current Decryption Password  | \<password\> | 
+| Server URL (Only takes an IP)  | ldap://controlcenter.corp.local | 
+| LDAP Username | CN=Administrator,CN=Users,DC=corp,DC=local  | 
+| LDAP Password   | \<password\> | 
+| User Search Base  | CN=Users,DC=corp,DC=local   | 
+| User Search Filter      | sAMAccountName={0}| 
+| Group Search Base     | OU=pks,OU=Infra,DC=corp,DC=local  | 
+| Group Search Filter       |  Member{0}   | 
+| Group Max Search Depth        |  10   | 
+| LDAP RBAC Admin Group       |  CN=opsmanage,OU=pks,OU=Infra,DC=corp,DC=local <br> The group where the opsman users are present  | 
 
-  Server URL                    ldap://controlcenter.corp.local
-
-  LDAP Username                 CN=Administrator,CN=Users,DC=corp,DC=local
-
-  LDAP Password                 \<password\>
-
-  User Search Base              OU=Offices,OU=IT,DC=corp,DC=local
-
-  User Search Filter            sAMAccountName={0}
-
-  Group Search Base             OU=pks,OU=Infra,DC=corp,DC=local
-
-  Group Search Filter           Member{0}
-
-  Group Max Search Depth        10
-
-  LDAP RBAC Admin Group         CN=opsmanage,OU=pks,OU=Infra,DC=corp,DC=local\
-                                The group where the opsman users are present
-  ------------------------------------------------------------------------------
 
 Azure Active Directory as a SAML Identity Endpoint
 ==================================================
@@ -824,9 +808,7 @@ the following:
 
 -   Under **Create**, click **Enterprise application**.
 
-![Enterprise application
-button](media/media/image29.png){width="3.356286089238845in"
-height="2.0945942694663167in"}
+![Enterprise application button](media/media/image29.png)
 
 -   Under Add your own app, select Non-gallery application.
 
@@ -834,27 +816,20 @@ height="2.0945942694663167in"}
 
 -   Navigate to Azure Active Directory \> Enterprise applications.
 
-![Enterprise applications
-tab](media/media/image30.png){width="3.553713910761155in"
-height="2.209459755030621in"}
+![Enterprise applications tab](media/media/image30.png)
 
 Click your app and then click Single sign-on.
 
-![Single sign-on
-tab](media/media/image31.png){width="5.236111111111111in"
-height="2.574324146981627in"}
+![Single sign-on tab](media/media/image31.png)
 
 -   Under Select a single sign-on method, select SAML.
 
-![Single sign-on
-pane](media/media/image32.png){width="4.790277777777778in"
-height="3.0945942694663167in"}
+![Single sign-on pane]
 
 -   Under Set up Single Sign-On with SAML, click the pencil icon
     for Basic SAML Configuration.
 
-![Basic SAML Configuration
-button](media/media/image33.png){width="6.5in" height="2.21875in"}
+![Basic SAML Configuration button](media/media/image33.png)
 
 Configure as per table below
 
